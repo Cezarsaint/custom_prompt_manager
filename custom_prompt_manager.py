@@ -5,7 +5,7 @@ class CharacterPromptGenerator:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "organization": (["lovehent", "meitabu", "VixMavis", "FutaVixen"], {}),
+                "organization": (["False1", "meitabu", "NaN", "0"], {}),
                 "project_type": (["comic", "pack", "extra"], {}),
                 "workspace": (["lightning", "runpod", "sagemaker"], {}),
                 "character_name": ("STRING", {"multiline": True}),
@@ -52,18 +52,18 @@ class CharacterPromptGenerator:
         
         # Map organization selection to its corresponding value
         org_mapping = {
-            "lovehent": "mdf_an,ratatatat74",
+            "False1": "mdf_an,ratatatat74",
             "meitabu": "(suyasuyabi,ratatatat74)",
-            "VixMavis": "Anime screencap,Koyorin",
-            "FutaVixen":"NOT_WORK"
+            "NaN": "Anime screencap,Koyorin",
+            "0":"NOT_WORK"
         }
         
         # Organization-specific tags for hiresfix_prompts
         hiresfix_org_mapping = {
-            "lovehent": "mdf_an,artist:quasarcake",
+            "False1": "mdf_an,artist:quasarcake",
             "meitabu": "(suyasuyabi,dross,(ratatatat74:0.5))",
-            "VixMavis": "Anime screencap,Koyorin,by free_style_\(yohan1754\)",
-            "FutaVixen":"NOT_WORK"
+            "NaN": "Anime screencap,Koyorin,by free_style_\(yohan1754\)",
+            "0":"NOT_WORK"
         }
         
         org_value = org_mapping[organization]
