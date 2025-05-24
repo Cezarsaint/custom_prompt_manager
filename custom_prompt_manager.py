@@ -55,7 +55,7 @@ class CharacterPromptGenerator:
             "False1": "mdf_an,ratatatat74",
             "meitabu": "(suyasuyabi,ratatatat74)",
             "NaN": "Anime screencap,Koyorin",
-            "0":"NOT_WORK"
+            "0":"_style0"
         }
         
         # Organization-specific tags for hiresfix_prompts
@@ -63,7 +63,7 @@ class CharacterPromptGenerator:
             "False1": "mdf_an,artist:quasarcake",
             "meitabu": "(suyasuyabi,dross,(ratatatat74:0.5))",
             "NaN": "Anime screencap,Koyorin,by free_style_\(yohan1754\)",
-            "0":"NOT_WORK"
+            "0":"_style0"
         }
         
         org_value = org_mapping[organization]
@@ -71,9 +71,9 @@ class CharacterPromptGenerator:
         
         # Map workspace selection to its corresponding file path
         workspace_paths = {
-            "lightning": "/teamspace/studios/this_studio/outputParagonCreator/",
-            "runpod": "/workspace/outputParagonCreator/",
-            "sagemaker": "/workspace/sage/outputParagonCreator/"
+            "lightning": "/teamspace/studios/this_studio/PACKS_CRIADOS/",
+            "runpod": "/workspace/PACKS_CRIADOS/",
+            "sagemaker": "/workspace/sage/PACKS_CRIADOS/"
         }
         
         workspace_path = workspace_paths[workspace]
