@@ -5,7 +5,7 @@ class CharacterPromptGenerator:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "organization": (["False1", "meitabu", "NaN", "0"], {}),
+                "organization": (["False1", "meitabu", "NaN", "0", "test"], {}),
                 "project_type": (["comic", "pack", "extra"], {}),
                 "workspace": (["lightning", "runpod", "sagemaker"], {}),
                 "character_name": ("STRING", {"multiline": True}),
@@ -55,7 +55,8 @@ class CharacterPromptGenerator:
             "False1": "mdf_an,ratatatat74",
             "meitabu": "(suyasuyabi,ratatatat74)",
             "NaN": "Anime screencap,Koyorin",
-            "0":"_style0"
+            "0":"_style0",
+            "test":"by mdf_an, ratatatat74"
         }
         
         # Organization-specific tags for hiresfix_prompts
@@ -63,7 +64,8 @@ class CharacterPromptGenerator:
             "False1": "mdf_an,artist:quasarcake",
             "meitabu": "(suyasuyabi,dross,(ratatatat74:0.5))",
             "NaN": "Anime screencap,Koyorin,by free_style_\(yohan1754\)",
-            "0":"_style0"
+            "0":"_style0",
+            "test":"by mdf_an,tomu_\(tomubobu\),"
         }
         
         org_value = org_mapping[organization]
